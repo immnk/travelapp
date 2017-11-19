@@ -1,0 +1,28 @@
+page-landing {
+  .center {
+    transform: translateY(-50%) translateZ(0);
+    top: 50%;
+    text-align: center;
+  }
+
+  .icon {
+    width: 40%;
+    border-radius: 37px;
+    box-shadow: 0 10px 12px 1px rgba(229, 229, 229, 0.50);
+  }
+
+  .title {
+    font-size: 4rem;
+    font-weight: 100;
+    margin: 16px;
+  }
+
+  .subtitle {
+    color: $light-grey;
+    font-weight: bold;
+  }
+
+  .button-wrapper {
+    margin-top: 52px;
+  }
+}

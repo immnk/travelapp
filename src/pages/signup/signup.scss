@@ -1,0 +1,40 @@
+page-signup {
+  .fixed-section {
+    height: 40vh;
+    text-align: center;
+
+    .wrapper {
+      position: relative;
+      top: 50%;
+      transform: translateY(calc( -50% - 20px));
+
+      .icon {
+        width: 30%;
+        border-radius: 37px;
+      }
+
+      .title {
+        color: $theme-foreground;
+        font-size: 2rem;
+        letter-spacing: 2px;
+        font-weight: 100;
+      }
+    }
+  }
+
+  .form-section {
+    transform: translateY(-50px);
+    margin: 0 20px;
+    background: $theme-foreground;
+    height: calc(60vh + 50px );
+    overflow-y: scroll;
+
+    form {
+      padding-bottom: 0;
+
+      .error-box {
+        color: color($colors, danger);
+      }
+    }
+  }
+}

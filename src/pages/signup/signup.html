@@ -1,0 +1,42 @@
+<ion-content>
+  <section ion-fixed>
+    <section class="fixed-section gradient-background">
+      <div class="wrapper">
+        <img src="../../assets/imgs/logo.png" class="icon" />
+        <div class="title">Sign Up</div>
+      </div>
+    </section>
+    <section class="form-section">
+      <form [formGroup]="authForm" (ngSubmit)="doSignUp()" padding>
+
+          <ion-item [class.error]="!username.valid && username.touched">
+            <ion-label floating>Username</ion-label>
+            <ion-input type="text" formControlName="username"></ion-input>
+          </ion-item>
+
+          <div *ngIf="username.hasError('required') && username.touched" class="error-box">* Username is required.</div>
+
+          <ion-item [class.error]="!email.valid && email.touched">
+            <ion-label floating>eMail ID</ion-label>
+            <ion-input type="email" formControlName="email"></ion-input>
+          </ion-item>
+
+          <div *ngIf="email.hasError('required') && email.touched" class="error-box">* eMail ID is required.</div>
+
+          <ion-item [class.error]="!password.valid && password.touched">
+            <ion-label floating>Password</ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+          </ion-item>
+
+          <div *ngIf="password.hasError('required') && password.touched" class="error-box">* Password is required.</div>
+          <div *ngIf="password.hasError('minlength') && password.touched" class="error-box">* Minimum password length is 8.</div>
+
+        <section text-center padding>
+          <button type="submit" ion-button round block color="primary" margin-bottom class="gradient-background">Sign Up</button>
+          <button type="button" ion-button round block color="primary">Sign Up with Facebook</button>
+        </section>
+        <!-- END TEXT-CENTER -->
+      </form>
+    </section>
+  </section>
+</ion-content>
